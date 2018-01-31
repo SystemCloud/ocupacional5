@@ -4,28 +4,15 @@
 			<li><a href="#" onclick="cargar_layout('home')"><i class="icon-home"></i></a> </li>
 			<li><a href="#" onclick="cargar_layout('tarifas')" > Tarifas</a></li>
 			<li>Datos de Tarifas </li>
+			<li><a class="text-green" href="#" onclick="add_form('tarifas/create','Crear Tarifa')" > Agregar</a></li>
+			<li><a class="text-yellow" href="#" onclick="edit_form('tarifas', 'Editar Tarifa')" > Editar</a></li>
+			<li><a class="text-aqua" href="#" onclick="detalles('tarifas', 'Detalles de Tarifa')" > Detalles</a></li>
+			<li><a class="text-red" href="#" onclick="eliminarTarifa()" > Eliminar</a></li>
 		</ul>
 	</div>
 </nav>
 <div class="row-fluid">
-	<div class="span12">
-		<h3 class="heading">
-			Tarifario
-		</h3>
-		<div class="botonera">
-			<div class="span10">
-				<button onclick="cargar_layout('tarifas')" class="btn btn-lg btn-gebo" type="button" name="button"><i class="ion-android-home"></i></button>
-				<button onclick="cargar_layout('tarifas/create')" class="btn btn-success" type="button" name="button"><i class="ion-android-add-circle" aria-hidden="true"></i> AGREGAR</button>
-				<button onclick="edit_form('tarifas')" class="btn btn-warning" type="button" name="button"><i class="ion-edit" aria-hidden="true"></i> EDITAR</button>
-				<button class="btn btn-info" type="button" name="button"><i class="ion-information-circled" aria-hidden="true"></i> DETALLES</button>
-				<button onclick="eliminarTarifa()" class="btn btn-danger" type="button" name="button"><i class="ion-android-delete" aria-hidden="true"></i> ELIMINAR</button>
-			</div>
-			<div class="span2">
-				<div class="input-prepend input-append text-right">
-					<input type="text" size="16" width="100%" class="span5"><span class="add-on"><i class="ion-search"></i></span>
-				</div>
-			</div>
-		</div>
+	<div class="span12">		
 		<div class="dataTables_wrapper form-inline" rol="grid">
 			<table id="tbTarifas" class="table table-bordered" id="dt_gal" aria-describedby="dt_gal_info">
 
@@ -46,6 +33,7 @@
 	</div>
 </div>
 <input type="hidden" readonly name="codigo" id="codigo" value="">
+@include('modal.modal')
 @section('scripts')
   <script src="{{ asset('/js/propio/super/tarifas.js') }}" type="text/javascript"></script>
   
@@ -80,7 +68,17 @@ function cargar_dataTable(){
 		 "columns"    : [
 			 {data:'id'},
 			 {data:'nombre_tarifa'},
-			 {data:'tipo_tarifa'},
+			 {data:'tipo_tarifa',render:function(data){
+			 	if(data=='1'){
+			 		return 'Mensual'
+			 	}else if(data=='2'){
+			 		return 'Trimestral'
+			 	}else if(data=='3'){
+			 		return 'Semestral'
+			 	}else if(data=='4'){
+			 		return 'Anual'
+			 	}
+			 }},
 			 {data:'precio'},
 		 ],
 		 ajax: {

@@ -55,8 +55,9 @@ class TarifasController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        //
+    { 
+        $tarifa = Tarifas::find($id);
+        return view('super.tarifas.detalle')->with('tarifa', $tarifa);
     }
 
     /**
@@ -107,9 +108,9 @@ class TarifasController extends Controller
 
     public function pagination(Request $request){
       if($request->ajax()){
-       return Datatables::of(Tarifas::all())->make(true);
+         return Datatables::of(Tarifas::all())->make(true);
          //return app('datatables')->eloquent(Clinicas::all())->make(true);
         // return $datatables->eloquent(User::where('tipo','2'))->make(true);
-   }
-}
+     }
+ }
 }

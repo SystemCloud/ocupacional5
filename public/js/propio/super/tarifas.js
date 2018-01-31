@@ -1,19 +1,19 @@
-function crearTarifas(){
-	conteo=$('#agregar_tarifa .required').length;
-	variable=0;
-	for(i=0;i<conteo;i++){
-		if($('#agregar_tarifa .required:eq('+i+')').val()==''){
-			$('#agregar_tarifa .requerido').fadeIn();
-			$('#agregar_tarifa .required:eq('+i+')').css({'border-color' : 'red'})
-			variable=variable+1;
-		}else{
-			$('#agregar_tarifa .required:eq('+i+')').css({'border-color' : '#D6D6D6'})
+$('#btnModal').click(function() {
+	if(!$("#agregar_tarifa").length == 0) {
+		if(!validator_form('#agregar_tarifa')){
+			crearTarifas();
 		}
+	}else if(!$("#editar_tarifa").length == 0){
+		if(!validator_form('#editar_tarifa')){
+			console.log("editar");
+			editarTarifa();
+		}
+	} else{
+		$('#modal_large').modal('hide');
 	}
-	if(variable>0){
-		notification('¡Los campos marcados en rojo son obligatorios!','error','2000');
-		return false;
-	}
+});
+
+function crearTarifas(){
 	route='tarifas';
 	data=$('#agregar_tarifa').serialize();	
 	var token =$('#token').val();
@@ -26,6 +26,8 @@ function crearTarifas(){
 		success: function(msj){
 			notification('Acabas de crear un nueva tarifa','success','2000');
 			$('#agregar_tarifa')[0].reset();
+			cargar_layout('tarifas');
+			$('#modal_large').modal('hide');
 		},
 		error:function(msj){
 
@@ -38,7 +40,6 @@ function editarTarifa(){
 	id = $('#id').val();
 	route='/tarifas/'+id + "";
 	data=$('#editar_tarifa').serialize();
-	alert(data);
 	var token =$('#token').val();
 	$.ajax({
 		url: route,
@@ -48,6 +49,8 @@ function editarTarifa(){
 		data: data,
 		success: function(msj){
 			notification('Acabas de atualizar un nueva tarifa','success','2000');
+			cargar_layout('tarifas');
+			$('#modal_large').modal('hide');
 		},
 		error:function(msj){
 			

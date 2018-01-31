@@ -1,19 +1,20 @@
-function crearClinicas(){
-	conteo=$('#agregar_clinica .required').length;
-	variable=0;
-	for(i=0;i<conteo;i++){
-		if($('#agregar_clinica .required:eq('+i+')').val()==''){
-			$('#agregar_clinica .requerido').fadeIn();
-			$('#agregar_clinica .required:eq('+i+')').css({'border-color' : 'red'})
-			variable=variable+1;
-		}else{
-			$('#agregar_clinica .required:eq('+i+')').css({'border-color' : '#D6D6D6'})
+$('#btnModal').click(function() {
+	if(!$("#agregar_clinica").length == 0) {
+		if(!validator_form('#agregar_clinica')){
+			crearClinicas();
 		}
-	}
-	if(variable>0){
-		notification('¡Los campos marcados en rojo son obligatorios!','error','2000');
-		return false;
-	}
+	}else if(!$("#editar_clinica").length == 0){
+		if(!validator_form('#editar_clinica')){
+			console.log("editar");
+			editarClinica();
+		}
+	} else{
+		$('#modal_large').modal('hide');
+	}	
+
+});
+
+function crearClinicas(){	
 	route='clinicas';
 	data=$('#agregar_clinica').serialize();	
 	var token =$('#token').val();
@@ -26,16 +27,18 @@ function crearClinicas(){
 		success: function(msj){
 			notification('Acabas de crear un nueva clinica','success','2000');
 			$('#agregar_clinica')[0].reset();
+			cargar_layout('clinicas');
+			$('#modal_large').modal('hide');
 		},
 		error:function(msj){
 
 		}
 	});
-
+	
 }
 
-function editarClinica(){
-	id = $('#id').val();
+function editarClinica(lugar = 0){
+	id = $('#codigo').val();
 	route='/clinicas/'+id + "";
 	data=$('#editar_clinica').serialize();
 	var token =$('#token').val();
@@ -47,6 +50,10 @@ function editarClinica(){
 		data: data,
 		success: function(msj){
 			notification('Acabas de atualizar un nueva clinica','success','2000');
+			$('#editar_clinica')[0].reset();
+			cargar_layout('clinicas');
+			$('#modal_large').modal('hide');
+			
 		},
 		error:function(msj){
 
@@ -60,5 +67,5 @@ function eliminarClinica(){
 	ruta = '/eliminarClinica/' + id;
 	token = $('#token').val();
 	eliminar("la clinica", ruta, id, token);
-	
+
 }

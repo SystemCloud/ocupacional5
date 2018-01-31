@@ -33,8 +33,10 @@ class ClinicasController extends Controller{
       ]);
     }
   }
-  public function show($id){
-
+  public function show($id){    
+    $clinica = Clinicas::find($id);
+    $tarifa = Tarifas::find($clinica->tarifas_id);
+    return view('super.clinicas.detalle')->with('clinica', $clinica)->with('tarifa', $tarifa->nombre_tarifa);
   }
   public function edit($id){
     $tarifas = Tarifas::all();

@@ -26,3 +26,4 @@
 <script src="lib/datatables/extras/Scroller/media/js/Scroller.min.js"></script>
 <!-- datatable functions -->
 <script src="js/gebo_datatables.js"></script>
+<script src="lib/uniform/jquery.uniform.min.js"></script>

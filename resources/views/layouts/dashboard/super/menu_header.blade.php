@@ -13,7 +13,14 @@
 			<li><a href="#" onclick="cargar_layout('miPirfel')">Mi Perfil</a></li>
 			<li><a href="#" onclick="cargar_layout('miPirfel.changePassword')">Cambio de Contraseña</a></li>
 			<li class="divider"></li>
-			<li><a href="/logout">Cerrar Sesion</a></li>
+			<a href="{{ route('logout') }}"
+              onclick="event.preventDefault();
+                       document.getElementById('logout-form').submit();">
+              Salir del Sistema
+          </a>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              {{ csrf_field() }}
+          </form>
 		</ul>
 	</li>
 </ul>
@@ -39,6 +46,7 @@
 				<a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-wrench icon-white"></i> CLINICAS <b class="caret"></b></a>
 				<ul class="dropdown-menu">
 					<li><a onclick="cargar_layout('clinicas')">Mantenimiento de Clinicas</a></li>
+					<li><a onclick="cargar_layout('clinicas')">Mantenimiento de Administradores</a></li>
 				</ul>
 			</li>
 			<li class="dropdown">

@@ -5,15 +5,44 @@ function cargar_layout(ruta){
 		$('#contenedor').html(data);
 	})
 }
-function edit_form(ruta){ 
+
+
+function add_form(ruta, titulo){
+	$('.preload_layout').show();
+	$.get(ruta,function(data){
+		$('.preload_layout').hide();
+		$('#modalLargeTitle').html(titulo);
+		$('#modal_content').html(data);
+		//$('#btnModal').hide();
+		$('#modal_large').modal('show');
+	})
+}
+
+function edit_form(ruta, titulo){ 
 	codigo=$('#codigo').val();
 	if(codigo==''){
 		notification('Para editar un registro, primero debes seleccionar uno de la tabla.','warning','2000');
 	}
 	$.get(ruta+'/'+codigo+'/edit',function(data){ 
 		$('.preload_layout').hide();
-		$('#contenedor').html(data);
+		$('#modalLargeTitle').html(titulo);
+		$('#modal_content').html(data);
+		$('#modal_large').modal('show');
 	})
+}
+
+function detalles(ruta, titulo){ 
+	codigo=$('#codigo').val();
+	if(codigo==''){
+		notification('Para ver detalles del registro, primero debes seleccionar uno de la tabla.','warning','2000');
+	}else{
+		$.get(ruta+'/'+codigo ,function(data){ 
+			$('.preload_layout').hide();
+			$('#modalLargeTitle').html(titulo);
+			$('#modal_content').html(data);
+			$('#modal_large').modal('show');
+		});
+	}
 }
 
 function eliminar(tipo, ruta, id, token){
@@ -48,6 +77,27 @@ function eliminar(tipo, ruta, id, token){
 			})
 			]
 		}).show();
+	}
+}
+
+function validator_form(formulario){
+	conteo=$(formulario + ' .required').length;
+	$('.preload_layout').show();
+	variable=0;
+	for(i=0;i<conteo;i++){
+		if($(formulario +' .required:eq('+i+')').val()==''){
+			$(formulario +' .required:eq('+i+')').css({'border-color' : 'red'})
+			variable=variable+1;
+		}else{
+			$(formulario +' .required:eq('+i+')').css({'border-color' : '#D6D6D6'})
+		}
+	}
+	if(variable>0){
+		notification('Los campos remarcados en rojo son obligatorios.','error','2500');
+		$('.preload_layout').hide();
+		return true;
+	}else{
+		return false;
 	}
 }
 
