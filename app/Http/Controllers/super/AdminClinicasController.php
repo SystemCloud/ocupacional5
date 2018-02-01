@@ -130,8 +130,9 @@ class AdminClinicasController extends Controller
 
     function eliminarAdminClinica($id){
         $admin = User::find($id);
+        $admin->clinicas()->detach();
         if($admin->delete()){
-            $admin->clinicas()->detach($admin->clinicas->user_id);
+            
             return response()->json(["mensaje" => "Eliminado"]);
         }
         

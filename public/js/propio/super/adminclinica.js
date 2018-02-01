@@ -99,7 +99,7 @@ function editarUser(lugar = 0){
 function eliminarUser(){
 	//falta traer el id
 	id = $('#codigo').val();
-	ruta = '/eliminarClinica/' + id;
+	ruta = '/eliminarAdminClinicas/' + id;
 	token = $('#token').val();
 	eliminar("el usuario", ruta, id, token);
 
