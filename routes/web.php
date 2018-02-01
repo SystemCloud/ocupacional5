@@ -28,3 +28,8 @@ Route::post('/clinicaPagination', 'super\ClinicasController@pagination');
 Route::resource('/tarifas','super\TarifasController');
 Route::post('/tarifaPagination', 'super\TarifasController@pagination');
 Route::get('/eliminarTarifa/{id}','super\TarifasController@eliminarTarifa');
+
+Route::resource('/adminClinicas','super\AdminClinicasController');
+Route::post('/adminClinicasPagination', 'super\AdminClinicasController@pagination');
+Route::post('/adminClinicas/validarCorreo', 'super\AdminClinicasController@validarCorreo');
+Route::get('/eliminarAdminClinicas/{id}','super\AdminClinicasController@eliminarTarifa');

@@ -46,7 +46,7 @@
 				<a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-wrench icon-white"></i> CLINICAS <b class="caret"></b></a>
 				<ul class="dropdown-menu">
 					<li><a onclick="cargar_layout('clinicas')">Mantenimiento de Clinicas</a></li>
-					<li><a onclick="cargar_layout('clinicas')">Mantenimiento de Administradores</a></li>
+					<li><a onclick="cargar_layout('adminClinicas')">Mantenimiento de Administradores</a></li>
 				</ul>
 			</li>
 			<li class="dropdown">

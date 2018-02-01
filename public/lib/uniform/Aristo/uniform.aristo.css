@@ -15,7 +15,7 @@ http://pixelmatrixdesign.com/uniform/themer.html
 
 div.uni-selector,div.uni-selector span,div.uni-checker span,div.uni-radio span,div.uni-uploader,div.uni-uploader span.uni-action{background-image:url(images/sprite-aristo.png);background-repeat:no-repeat}
 .uni-selector,.uni-radio,.uni-checker,.uni-uploader,.uni-selector *,.uni-radio *,.uni-checker *,.uni-uploader *{margin:0;padding:0}
-div.uni-selector{background-position:-483px -160px;line-height:32px;height:32px;margin-bottom:20px;width:190px;font-weight:700;color:#464545;font-size:12px;position:relative;padding-left:10px}
+div.uni-selector{background-position:-483px -160px;line-height:32px;height:32px;margin-bottom:0px;width:190px;font-weight:700;color:#464545;font-size:12px;position:relative;padding-left:10px}
 div.uni-selector span{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;background-position:right 0;height:32px;line-height:32px;cursor:pointer;color:#666;width:158px;text-shadow:0 1px 0 rgba(255,255,255,.8);display:block;float:left;padding:0 32px 0 2px}
 div.uni-selector select{top:0;left:0;width:190px;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:1em;border:solid 1px #fff;position:absolute;opacity:0}
 div.uni-selector:active,div.uni-selector.uni-active{background-position:-483px -192px}

@@ -13,6 +13,7 @@ function add_form(ruta, titulo){
 		$('.preload_layout').hide();
 		$('#modalLargeTitle').html(titulo);
 		$('#modal_content').html(data);
+		//falta cambiar el boton de guardar dependiendo de donde este agregar editar eliminar
 		//$('#btnModal').hide();
 		$('#modal_large').modal('show');
 	})
@@ -73,11 +74,55 @@ function eliminar(tipo, ruta, id, token){
 
 			Noty.button('NO', 'btn btn-error', function () {
 
-				n.close();
+				n.close(); 
 			})
 			]
 		}).show();
 	}
+}
+
+function cargar_multiselect(identificador){
+	$(".uni_style").uniform();
+
+		$('.multiselect').multiSelect({
+			selectableHeader	: '<h4>Selectable Items</h4>',
+			selectedHeader		: '<h4>Selected Items</h4>'
+		});
+		$('#ms-optgroup .ms-selectable, #ms-outsideCountries .ms-selectable').find('li.ms-elem-selectable').hide();
+		$('.ms-optgroup-label').click(function(){
+			if ($(this).hasClass('ms-collapse')){
+				$(this).nextAll('li').hide();
+				$(this).removeClass('ms-collapse'); 
+			} else {
+				$(this).nextAll('li:not(.ms-selected)').show();
+				$(this).addClass('ms-collapse');
+			}
+		});
+
+		$(identificador).multiSelect({
+			selectableHeader : '<input type="text" id="multi_search" autocomplete="off" placeholder="search" />',
+			selectedHeader	 : '<a href="javascript:void(0)" id="sForm_deselect" class="btn">Deselect All</a>'
+		});
+		variable = identificador.split('#');
+		console.log(variable[1]);
+		$('input#multi_search').quicksearch('#ms-'+ variable[1] +' .ms-selectable li');
+		$(identificador).multiSelect();
+
+		$('#select_all').on('click', function(){
+			$('.multiselect').multiSelect('select_all');
+			return false;
+		});
+
+		$('#deselect_all').on('click', function(){
+			$('.multiselect').multiSelect('deselect_all');
+			return false;
+		});
+
+		$('#sForm_deselect').on('click', function(){
+			$(identificador).multiSelect('deselect_all');
+			return false;
+		});
+
 }
 
 function validator_form(formulario){
