@@ -9,19 +9,19 @@
 					<div class="control-group">
 						<label for="nombreT" class="control-label">Nombre: </label>
 						<div class="controls">
-							<input class="required" type="text" class="span10" name="nombre_tarifa" id="nombreT">							
+							<input class="span10 required foco" type="text" name="nombre_tarifa" id="nombreT">							
 						</div>
 					</div>
 					<div class="control-group">
 						<label for="precioT" class="control-label">Precio: </label>
 						<div class="controls">
-							<input class="required" type="number" name="precio" class="span10" id="precioT">							
+							<input class="required span10" type="number" name="precio" id="precioT">							
 						</div>
 					</div>
 					<div class="control-group">
 						<label for="precioT" class="control-label">Duración (meses): </label>
 						<div class="controls">
-							<input class="required" type="number" name="duracion" class="span10" id="precioT">							
+							<input class="required span10" type="number" name="duracion" id="precioT">							
 						</div>
 					</div>
 					<!--<div class="control-group">

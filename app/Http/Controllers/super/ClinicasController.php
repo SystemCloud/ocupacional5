@@ -40,7 +40,7 @@ class ClinicasController extends Controller{
   }
   public function update(Request $request, $id){
     $clinica = Clinicas::find($id);
-    $clinica->fill($request->all());
+    $clinica->fill($request->all()); 
     $clinica->save();
     return response()->json([
       "mensaje" => "listo" 

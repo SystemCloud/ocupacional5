@@ -10,7 +10,7 @@
 					<div class="control-group">
 						<label for="nonbreT" class="control-label negrita">Nombre:: </label>
 						<div class="controls">
-							<p class="pull-left centrar-vertical">{{$tarifa->nombre_tarifa}} </p>
+							<p class="pull-left centrar-vertical span10">{{$tarifa->nombre_tarifa}} </p>
 						</div>
 					</div>
 					<div class="control-group">

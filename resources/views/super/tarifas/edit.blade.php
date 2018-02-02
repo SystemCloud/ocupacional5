@@ -9,7 +9,7 @@
 					<div class="control-group">
 						<label for="nonbreT" class="control-label">Nombre: </label>
 						<div class="controls">
-							<input value="{{$tarifa->nombre_tarifa}}" name="nombre_tarifa" type="text" class="span10" id="nobreT">							
+							<input value="{{$tarifa->nombre_tarifa}}" name="nombre_tarifa" type="text" class="span10 foco" id="nobreT">							
 						</div>
 					</div>
 					<div class="control-group">

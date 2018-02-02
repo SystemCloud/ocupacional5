@@ -29,6 +29,10 @@ Route::resource('/tarifas','super\TarifasController');
 Route::post('/tarifaPagination', 'super\TarifasController@pagination');
 Route::get('/eliminarTarifa/{id}','super\TarifasController@eliminarTarifa');
 
+Route::resource('/examenes','super\ExamenController');
+Route::post('/examenesPagination', 'super\ExamenController@pagination');
+Route::get('/eliminarExamen/{id}','super\ExamenController@eliminarExamen');
+
 Route::resource('/adminClinicas','super\AdminClinicasController');
 Route::post('/adminClinicasPagination', 'super\AdminClinicasController@pagination');
 Route::post('/adminClinicas/validarCorreo', 'super\AdminClinicasController@validarCorreo');

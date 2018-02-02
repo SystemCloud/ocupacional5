@@ -7,7 +7,7 @@
 					<div class="control-group">
 						<label for="nonbreT" class="control-label">Razon Social: </label>
 						<div class="controls">
-							<input type="text" class="span10 required" name="razon_social" id="nobreT">							
+							<input type="text" class="span10 required foco" name="razon_social" id="nobreT">							
 						</div>
 					</div>
 					<div class="control-group">

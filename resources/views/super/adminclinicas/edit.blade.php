@@ -7,7 +7,7 @@
 					<div class="control-group">
 						<label for="nonbreT" class="control-label">Nombre Completo: </label>
 						<div class="controls">
-							<input value="{{$admin->name}}" type="text" class="span10 required" name="razon_social" id="nobreT">							
+							<input value="{{$admin->name}}" type="text" class="span10 required foco" name="razon_social" id="nobreT">							
 						</div>
 					</div>
 					<div class="control-group">

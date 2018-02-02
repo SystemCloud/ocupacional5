@@ -7,7 +7,7 @@
 					<div class="control-group">
 						<label for="nombreC" class="control-label">Nombre Completo: </label>
 						<div class="controls">
-							<input type="text" class="span10 required" name="name" id="nombreC" focus>							
+							<input type="text" class="span10 required foco" name="name" id="nombreC" focus>							
 						</div>
 					</div>
 					<div class="control-group">

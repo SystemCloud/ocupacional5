@@ -33,7 +33,7 @@
 			<li class="dropdown">
 				<a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-list-alt icon-white"></i> ACCESOS <b class="caret"></b></a>
 				<ul class="dropdown-menu">
-					<li><a href="form_elements.html">Form elements</a></li>
+					<li><a href="#">Desbloqueo de Usuarios</a></li>
 				</ul>
 			</li>
 			<li class="dropdown">
@@ -45,15 +45,15 @@
 			<li class="dropdown">
 				<a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-wrench icon-white"></i> CLINICAS <b class="caret"></b></a>
 				<ul class="dropdown-menu">
-					<li><a onclick="cargar_layout('clinicas')">Mantenimiento de Clinicas</a></li>
-					<li><a onclick="cargar_layout('adminClinicas')">Mantenimiento de Administradores</a></li>
+					<li><a onclick="cargar_layout('clinicas')">Clinicas</a></li>
 					<li><a onclick="cargar_layout('arrendamientos')">Arrendamientos</a></li>
+					<li><a onclick="cargar_layout('examenes')">Examenes Generales</a></li>
 				</ul>
 			</li>
 			<li class="dropdown">
 				<a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-file icon-white"></i> ADMINISTRADORES <b class="caret"></b></a>
 				<ul class="dropdown-menu">
-					<li><a href="chat.html">Chat</a></li>
+					<li><a onclick="cargar_layout('adminClinicas')">Administradores de Clinicas</a></li>
 				</ul>
 			</li>
 		</ul>

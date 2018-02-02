@@ -10,7 +10,7 @@
 					<div class="control-group">
 						<label for="precioT" class="control-label">Clinica: </label>
 						<div class="controls">
-							<select name="clinicas_id" id="chosen_a" data-placeholder="Seleccinoe una clinica" class="uni_style required">
+							<select name="clinicas_id" id="chosen_a" data-placeholder="Seleccinoe una clinica" class="uni_style required foco">
 								@foreach($clinicas as $clinica)
 								<option value="{{$clinica->id}}">{{$clinica->razon_social}}</option>
 								@endforeach
