@@ -39,18 +39,7 @@
 						<div class="controls">
 							<input type="text" class="span10 required" name="correo" id="precioT">							
 						</div>
-					</div>
-					
-					<div class="control-group">
-						<label for="precioT" class="control-label">Tarifas: </label>
-						<div class="controls">
-							<select name="tarifas_id" id="chosen_a" data-placeholder="Seleccinoe una tarifa" class="uni_style required">
-								@foreach($tarifas as $tarifa)
-								<option value="{{$tarifa->id}}">{{$tarifa->nombre_tarifa}}</option>
-								@endforeach
-							</select>
-						</div>
-					</div>
+					</div>					
 
 				</fieldset>
 			</form>

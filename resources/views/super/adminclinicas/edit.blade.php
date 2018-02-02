@@ -30,13 +30,11 @@
 						<div id="multiselec" class="controls span12">
 							<select name="clinicas_id[]" multiple="multiple" id="searchable-select" class="required">
 								@foreach($clinicas as $clinica)
-									<option @foreach($myclinicas as $myclinica)<?php if($clinica->id == $myclinica){ ?> selected <?php } ?> @endforeach value="{{$clinica->id}}">{{$clinica->razon_social}}</option>
-									
+									<option @foreach($myclinicas as $myclinica)<?php if($clinica->id == $myclinica){ ?> selected <?php } ?> @endforeach value="{{$clinica->id}}">{{$clinica->razon_social}}</option>			
 								@endforeach
 							</select>
 						</div>
 					</div>
-					
 				</fieldset>
 			</form>
 		</div>

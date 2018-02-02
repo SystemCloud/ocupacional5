@@ -16,7 +16,7 @@ class AdminClinicasController extends Controller
     //  $this->middleware('super');
     }
 
-    public function index()
+    public function index() 
     {
         //$admin=User::paginate(10);
         return view('super.adminclinicas.index');

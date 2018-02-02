@@ -13,9 +13,20 @@
 						</div>
 					</div>
 					<div class="control-group">
-						<label for="precioT" class="control-label">Duración (meses): </label>
+						<label for="tipoT" class="control-label">Tipo: </label>
 						<div class="controls">
-							<input value="{{$tarifa->duracion}}" class="required" type="number" name="duracion" class="span10" id="precioT">							
+							<input value="{{$tarifa->tipo_tarifa}}" name="tipo_tarifa" type="text" class="span10" id="tipoT">							
+						</div>
+					</div>
+
+					<div class="control-group">
+						<label for="precioT" class="control-label">Tipo: </label>
+						<div class="controls">
+							<select name="tarifas_id" id="chosen_a" data-placeholder="Seleccinoe una tarifa" class="uni_style required">
+								<option value="Mensual">Mensual</option>
+								<option value="Mensual">Trimestral</option>
+								<option value="Mensual">Anual</option>
+							</select>
 						</div>
 					</div>
 					<div class="control-group">

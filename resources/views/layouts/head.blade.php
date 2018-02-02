@@ -17,4 +17,6 @@
 <link rel="stylesheet" href="lib/chosen/chosen.css" />
 <link rel="stylesheet" href="lib/uniform/Aristo/uniform.aristo.css" />
 <link rel="stylesheet" href="lib/multiselect/css/multi-select.css" />
+<link rel="stylesheet" href="lib/datepicker/datepicker.css" />
+<link rel="stylesheet" href="img/splashy/splashy.css" />
 <link rel="stylesheet" href="css/style.css" />

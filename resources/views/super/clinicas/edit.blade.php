@@ -41,17 +41,6 @@
 						</div>
 					</div>
 					
-					<div class="control-group">
-						<label for="precioT" class="control-label">Tarifas: </label>
-						<div class="controls">
-							<select name="tarifas_id" id="chosen_a" data-placeholder="Seleccione una opcion..." class="chzn_a required">
-								<option value=""></option>
-								@foreach($tarifas as $tarifa)
-								<option <?php if($tarifa->id == $clinica->tarifas_id){ ?> selected <?php } ?> value="{{$tarifa->id}}">{{$tarifa->nombre_tarifa}}</option>
-								@endforeach
-							</select>
-						</div>
-					</div>
 				</fieldset>
 			</form>
 	    </div>

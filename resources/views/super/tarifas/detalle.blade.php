@@ -14,9 +14,9 @@
 						</div>
 					</div>
 					<div class="control-group">
-						<label for="tipoT" class="control-label negrita">Tipo: </label>
+						<label for="tipoT" class="control-label negrita">Duración: </label>
 						<div class="controls">
-							<p class="pull-left centrar-vertical">{{$tarifa->tipo_tarifa}} </p>
+							<p class="pull-left centrar-vertical">{{$tarifa->duracion}} </p>
 						</div>
 					</div>
 					<div class="control-group">

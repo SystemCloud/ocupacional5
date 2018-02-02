@@ -43,12 +43,6 @@
 						</div>
 					</div>
 					
-					<div class="control-group">
-						<label for="precioT" class="control-label negrita">Tarifas: </label>
-						<div class="controls">
-							<p class="pull-left centrar-vertical">{{$tarifa}} </p>
-						</div>
-					</div>
 
 				</fieldset>
 			</form>

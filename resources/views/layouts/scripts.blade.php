@@ -28,3 +28,4 @@
 <script src="js/gebo_datatables.js"></script>
 <script src="lib/uniform/jquery.uniform.min.js"></script>
 <script src="lib/multiselect/js/jquery.multi-select.min.js"></script>
+<script src="lib/datepicker/bootstrap-datepicker.min.js"></script>

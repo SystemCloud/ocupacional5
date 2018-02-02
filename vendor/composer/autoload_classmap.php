@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Arrendamientos' => $baseDir . '/app/Arrendamientos.php',
     'App\\Clinicas' => $baseDir . '/app/Clinicas.php',
     'App\\ClinicasUser' => $baseDir . '/app/ClinicasUser.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
@@ -17,6 +18,8 @@ return array(
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\PerfilController' => $baseDir . '/app/Http/Controllers/PerfilController.php',
+    'App\\Http\\Controllers\\super\\AdminClinicasController' => $baseDir . '/app/Http/Controllers/super/AdminClinicasController.php',
+    'App\\Http\\Controllers\\super\\ArrendamientosController' => $baseDir . '/app/Http/Controllers/super/ArrendamientosController.php',
     'App\\Http\\Controllers\\super\\ClinicasController' => $baseDir . '/app/Http/Controllers/super/ClinicasController.php',
     'App\\Http\\Controllers\\super\\TarifasController' => $baseDir . '/app/Http/Controllers/super/TarifasController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',

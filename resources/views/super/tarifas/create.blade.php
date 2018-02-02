@@ -18,13 +18,13 @@
 							<input class="required" type="number" name="precio" class="span10" id="precioT">							
 						</div>
 					</div>
-					<!--<div class="control-group">
-						<label for="tipoT" class="control-label">Tipo: </label>
-						<div class="controls">
-							<input class="required" type="number" name="tipo_tarifa" class="span10" id="tipoT">							
-						</div>
-					</div>-->
 					<div class="control-group">
+						<label for="precioT" class="control-label">Duración (meses): </label>
+						<div class="controls">
+							<input class="required" type="number" name="duracion" class="span10" id="precioT">							
+						</div>
+					</div>
+					<!--<div class="control-group">
 						<label for="tipoT" class="control-label">Tipo: </label>
 						<div class="controls">
 							<select name="tipo_tarifa" id="chosen_a" data-placeholder="Seleccinoe un tipo de tarifa" class="uni_style required ">
@@ -34,7 +34,7 @@
 								<option value="4">Anual</option>
 							</select>
 						</div>
-					</div>
+					</div>-->
 					
 				</fieldset>
 			</form>

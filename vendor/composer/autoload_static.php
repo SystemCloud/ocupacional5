@@ -320,6 +320,7 @@ class ComposerStaticInit9b39b4d0b4c3af568c5f83d9f622946a
     );
 
     public static $classMap = array (
+        'App\\Arrendamientos' => __DIR__ . '/../..' . '/app/Arrendamientos.php',
         'App\\Clinicas' => __DIR__ . '/../..' . '/app/Clinicas.php',
         'App\\ClinicasUser' => __DIR__ . '/../..' . '/app/ClinicasUser.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
@@ -331,6 +332,8 @@ class ComposerStaticInit9b39b4d0b4c3af568c5f83d9f622946a
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\PerfilController' => __DIR__ . '/../..' . '/app/Http/Controllers/PerfilController.php',
+        'App\\Http\\Controllers\\super\\AdminClinicasController' => __DIR__ . '/../..' . '/app/Http/Controllers/super/AdminClinicasController.php',
+        'App\\Http\\Controllers\\super\\ArrendamientosController' => __DIR__ . '/../..' . '/app/Http/Controllers/super/ArrendamientosController.php',
         'App\\Http\\Controllers\\super\\ClinicasController' => __DIR__ . '/../..' . '/app/Http/Controllers/super/ClinicasController.php',
         'App\\Http\\Controllers\\super\\TarifasController' => __DIR__ . '/../..' . '/app/Http/Controllers/super/TarifasController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',

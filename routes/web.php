@@ -33,3 +33,9 @@ Route::resource('/adminClinicas','super\AdminClinicasController');
 Route::post('/adminClinicasPagination', 'super\AdminClinicasController@pagination');
 Route::post('/adminClinicas/validarCorreo', 'super\AdminClinicasController@validarCorreo');
 Route::get('/eliminarAdminClinicas/{id}','super\AdminClinicasController@eliminarAdminClinica');
+
+Route::resource('/arrendamientos','super\ArrendamientosController');
+Route::post('/arrendamientosPagination', 'super\ArrendamientosController@pagination');
+Route::post('/arrendamientos/mostrarTarifa', 'super\ArrendamientosController@mostrarTarifas');
+Route::get('/eliminarArrendamiento/{id}','super\ArrendamientosController@eliminarArrendamiento');
+Route::get('/arrendamiento/{id}','super\ArrendamientosController@buscarTarifa');

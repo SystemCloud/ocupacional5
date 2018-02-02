@@ -6,7 +6,6 @@ use Datatables;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Clinicas;
-use App\Tarifas;
 
 use Auth;
 
@@ -21,27 +20,23 @@ class ClinicasController extends Controller{
     ->with('clinicas',$clinicas);
   }
   public function create(){
-    $tarifas = Tarifas::all();
-    return view('super.clinicas.create')
-    ->with('tarifas',$tarifas);
+    return view('super.clinicas.create');
   }
   public function store(Request $request){
     if($request->ajax()){
       Clinicas::create($request->all());
       return response()->json([
         "mensaje" => "creado"
-      ]);
+      ]); 
     }
   }
   public function show($id){    
     $clinica = Clinicas::find($id);
-    $tarifa = Tarifas::find($clinica->tarifas_id);
-    return view('super.clinicas.detalle')->with('clinica', $clinica)->with('tarifa', $tarifa->nombre_tarifa);
+    return view('super.clinicas.detalle')->with('clinica', $clinica);
   }
   public function edit($id){
-    $tarifas = Tarifas::all();
     $clinica = Clinicas::find($id);
-    return view('super.clinicas.edit')->with('clinica', $clinica)->with('tarifas', $tarifas);
+    return view('super.clinicas.edit')->with('clinica', $clinica);
   }
   public function update(Request $request, $id){
     $clinica = Clinicas::find($id);
@@ -62,8 +57,6 @@ class ClinicasController extends Controller{
   public function pagination(Request $request){
     if($request->ajax()){
      return Datatables::of(Clinicas::all())->make(true);
-         //return app('datatables')->eloquent(Clinicas::all())->make(true);
-        // return $datatables->eloquent(User::where('tipo','2'))->make(true);
    }
  }
 }

@@ -47,6 +47,7 @@
 				<ul class="dropdown-menu">
 					<li><a onclick="cargar_layout('clinicas')">Mantenimiento de Clinicas</a></li>
 					<li><a onclick="cargar_layout('adminClinicas')">Mantenimiento de Administradores</a></li>
+					<li><a onclick="cargar_layout('arrendamientos')">Arrendamientos</a></li>
 				</ul>
 			</li>
 			<li class="dropdown">

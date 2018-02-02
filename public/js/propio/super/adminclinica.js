@@ -13,7 +13,7 @@ $('#btnModal').click(function() {
 	}	
 
 });
-
+ 
 function crearUser(){	
 	route='adminClinicas';
 	data=$('#agregar_admin_clinica').serialize();	
