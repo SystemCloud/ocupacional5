@@ -12,7 +12,6 @@ use Auth;
 class ClinicasController extends Controller{
 	public function __construct(){
 		$this->middleware('auth'); 
-	//	$this->middleware('super');
 	}
   public function index(){ 
     $clinicas=Clinicas::paginate(10);

@@ -15,11 +15,14 @@ Route::get('/', 'HomeController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::post('validar','HomeController@validar');
 //Rutas para perfiles
 Route::get('/miPirfel','PerfilController@index');
 Route::get('/miPirfel.changePassword','PerfilController@password');
 Route::put('/perfil.update','PerfilController@update');
 
+
+//SUPERUSUARIO
 //RUTAS PARA CLINICAS
 Route::resource('/clinicas','super\ClinicasController');
 Route::get('/eliminarClinica/{id}','super\ClinicasController@eliminarClinica');
@@ -43,3 +46,9 @@ Route::post('/arrendamientosPagination', 'super\ArrendamientosController@paginat
 Route::post('/arrendamientos/mostrarTarifa', 'super\ArrendamientosController@mostrarTarifas');
 Route::get('/eliminarArrendamiento/{id}','super\ArrendamientosController@eliminarArrendamiento');
 Route::get('/arrendamiento/{id}','super\ArrendamientosController@buscarTarifa');
+
+
+//ADMIN CLINICAS
+Route::resource('/empresas','clinicas\EmpresasController');
+Route::post('/empresasPagination', 'clinicas\EmpresasController@pagination');
+Route::get('/eliminarEmpresas/{id}','clinicas\EmpresasController@eliminarEmpresa');

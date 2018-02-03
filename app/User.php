@@ -17,5 +17,10 @@ class User extends Authenticatable{
 	public function scopeBuscarCorreo($query,$correo){
 		$query->where('email',$correo);
 	}
-
+	public function scopeValidarIngreso($query,$codigo,$user_id){
+		$query->where('id',$user_id)
+		->whereHas('clinicas',function($q) use($codigo){
+			$q->where('clinicas_id',$codigo);
+		});
+	}
 }

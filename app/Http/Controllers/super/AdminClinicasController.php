@@ -18,9 +18,7 @@ class AdminClinicasController extends Controller
 
     public function index() 
     {
-        //$admin=User::paginate(10);
         return view('super.adminclinicas.index');
-        //->with('admin',$admin);
     }
 
     /**

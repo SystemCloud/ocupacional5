@@ -13,6 +13,10 @@ class Clinicas extends Model{
 		return $this->belongsToMany('App\User');
 	}
 
+	public function empresas(){
+		return $this->belongsToMany('App\Empresas');
+	}
+
 	public function arrendamientos(){
 		return $this->hasMany('App\Arerndamientos');
 	}

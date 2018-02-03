@@ -20,22 +20,18 @@
 					 @include('layouts.modal')
 				</header>
 				<div id="contentwrapper">
-					 <div class="main_content">
-						  <nav>
-								<div id="jCrumbs" class="breadCrumb module">
-									 <ul>
-										  <li><a href="#"><i class="icon-home"></i></a> </li>
-										  <li><a href="#">Menu1</a></li>
-										  <li><a href="#">Submenu1</a></li>
-										  <li><a href="#">Tremenu1</a></li>
-										  <li><a href="#">Ultima</a> </li>
-										  <li>Telescope 3735SX </li>
-									 </ul>
-								</div>
-						  </nav>
-						  <div class="row-fluid">
-							  <!--  aqui va el contenido-->
-						  </div>
+					<div class="overlay preload_layout" style="display:none" >
+						<img src="img/ajax_loader.gif" alt="" />
+					 </div>
+					 <div class="main_content" id="contenedor"> 
+						 <nav>
+						 	 <div id="jCrumbs" class="breadCrumb module">
+						 		  <ul>
+						 			   <li><a href="#"><i class="icon-home"></i></a> </li>
+						 			   <li>Resumen de Procesos </li>
+						 		  </ul>
+						 	 </div>
+						 </nav>
 					 </div>
 				</div>
 			@include('layouts.dashboard.clinica.sidebar')

@@ -6,7 +6,7 @@
 			document.documentElement.className += 'js';
 		</script>
 	</head>
-	<body>
+	<body> 
 		<div id="loading_layer" style="display:none"><img src="img/ajax_loader.gif" alt="" /></div>
 		<div id="maincontainer" class="clearfix">
 				<header>
@@ -23,7 +23,7 @@
 					<div class="overlay preload_layout" style="display:none" >
 						<img src="img/ajax_loader.gif" alt="" />
 					 </div>
-					 <div class="main_content" id="contenedor">
+					 <div class="main_content" id="contenedor"> 
 						 <nav>
 						 	 <div id="jCrumbs" class="breadCrumb module">
 						 		  <ul>
